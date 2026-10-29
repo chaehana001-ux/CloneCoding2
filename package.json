@@ -1,6 +1,12 @@
 {
-  "name": "live-evil-clone",
+  "name": "tving-clone",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "dev": "node server.mjs", "start": "node server.mjs", "check": "node --check app.js && node --check server.mjs" }
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check app.js && node --check server.mjs && node --check scripts/build.mjs && node --check scripts/verify.mjs",
+    "build": "npm run check && node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs"
+  }
 }
